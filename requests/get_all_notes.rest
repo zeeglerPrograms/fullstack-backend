@@ -2,6 +2,18 @@ POST http://localhost:3001/api/notes/
 Content-Type: application/json
 
 {
-    "content": "Testing backend still works", 
+    "content": "3s", 
     "important": true
+}
+###
+GET http://localhost:3001/api/notes
+###
+DELETE http://localhost:3001/api/notes/68cd61e4982a43ec314667dc
+###
+PUT http://localhost:3001/api/notes/68cd7dd71db7806494081334
+Content-Type: application/json
+
+{
+    "content": "Changing this note",
+    "important": false
 }
