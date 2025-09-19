@@ -1,7 +1,9 @@
+require('dotenv').congfig()
 const express = require('express')
+const Note = require('./models/note')
+
 const app = express()
 app.use(express.static('dist'))
-const Note = require('./models/note')
 
 
 app.use(express.json())
@@ -99,7 +101,7 @@ app.use(undknownEndpoint)
 
 
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })
