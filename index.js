@@ -1,4 +1,4 @@
-require('dotenv').congfig()
+require('dotenv').config()
 const express = require('express')
 const Note = require('./models/note')
 
