@@ -11,7 +11,7 @@ notesRouter.get('/:id', async (request, response) => {
   if (note) {
     response.json(note)
   } else {
-    response.status(404).end
+    response.status(404).end()
   }
 })
 
@@ -36,7 +36,7 @@ notesRouter.put('/:id', (request, response, next) => {
   const { content, important } = request.body
 
   Note.findById(request.params.id)
-    .then(note => {
+    .then((note) => {
       if (!note) {
         return response.status(404).end()
       }
@@ -48,7 +48,7 @@ notesRouter.put('/:id', (request, response, next) => {
         response.json(updatedNote)
       })
     })
-    .catch(error => next(error))
+    .catch((error) => next(error))
 })
 
 module.exports = notesRouter
