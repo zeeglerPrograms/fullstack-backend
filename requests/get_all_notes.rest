@@ -2,8 +2,9 @@ POST http://localhost:3001/api/notes/
 Content-Type: application/json
 
 {
-    "content": "Five Characters", 
-    "important": true
+    "content": "2nd note with user id", 
+    "important": true,
+    "userId": "68d59c1e60fb3f85eef2e512"
 }
 ###
 GET http://localhost:3001/api/notes
@@ -16,4 +17,15 @@ Content-Type: application/json
 {
     "content": "Changing this note",
     "important": false
+}
+###
+GET http://localhost:3001/api/users
+###
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "mluukkai",
+    "name": "Matti Luukainen",
+    "password": "salainen"
 }
