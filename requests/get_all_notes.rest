@@ -29,3 +29,20 @@ Content-Type: application/json
     "name": "Matti Luukainen",
     "password": "salainen"
 }
+###
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+    "username": "mluukkai",
+    "password": "salainen"
+}
+###
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1sdXVra2FpIiwiaWQiOiI2OGQ1OWMxZTYwZmIzZjg1ZWVmMmU1MTIiLCJpYXQiOjE3NTg5MDQxMTh9.d0AT6l8GIhtbaeSxfZuykgV-La1luZgUri0Utz3D7k4
+
+{
+    "content": "single page apps use token based auth",
+    "important": false
+}
